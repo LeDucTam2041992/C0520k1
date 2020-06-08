@@ -2,9 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<h1>Caculator</h1>
+<form action="" method="post">
+<input type="text" id="a" size="24"> <input type="text" id="b" size="24"><br><br>
+<input type="button" name="mat" onclick="result(value)" value="Addition(+)">
+<input type="button" name="mat" onclick="result(value)" value="Subtraction(-)">
+<input type="button" name="mat" onclick="result(value)" value="Multiplication(x)">
+<input type="button" name="mat" onclick="result(value)" value="Division(/)">
+<br><br>
+</form>
+<p>
+    <label>Result : </label><strong id="result"></strong>
+</p>
+</body>
+<script>
+    function result(value) {
+        let a = +document.getElementById("a").value;
+        let b = +document.getElementById("b").value;
+        if(value=="Addition(+)") document.getElementById("result").innerHTML=value+" = "+(a+b);
+        if(value=="Subtraction(-)") document.getElementById("result").innerHTML=value+" = "+(a-b);
+        if(value=="Multiplication(x)") document.getElementById("result").innerHTML=value+" = "+(a*b);
+        if(value=="Division(/)") document.getElementById("result").innerHTML=value+" = "+(a/b);
+    }
+</script>
 </body>
 </html>
