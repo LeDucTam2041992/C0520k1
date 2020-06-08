@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form  method="post">
+    <table>
+        <tr><td width="300">Amount</td><td width="200">From Currency</td><td width="200">To Currency</td></tr>
+        <tr>
+            <td><input type="text" id="amount" name="amount"></td>
+            <td>
+                <select id="F">
+                    <option name="from" value="vnd">VietNam</option>
+                    <option name="from" value="bucks">USD</option>
+                </select>
+            </td>
+            <td>
+                <select id="T">
+                    <option name="to" value="vnd">VietNam</option>
+                    <option name="to" value="bucks">USD</option>
+                </select>
+            </td>
+            <td>
+                <input type="button" value="Convert" onclick="showResult()">
+            </td>
+        </tr>
+    </table>
+</form>
+<p>Result : <label id="result"></label></p>
+</body>
+<script>
+    function showResult() {
+        let result,amount,from,to;
+        amount = document.getElementById("amount").value;
+        from = document.getElementById("F").value;
+        to = document.getElementById("T").value;
+        if(from =="bucks" & to =="vnd")  result = amount*23000;
+        if(from =="vnd" & to =="bucks")  result = amount/23000;
+        document.getElementById("result").innerHTML=(result+to);
+    }
+</script>
+</html>
