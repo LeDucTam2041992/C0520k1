@@ -2,9 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<button onclick="result()">Click Here</button>
+<br><br>
+<script>
+    function result() {
+        let f = 20.5;
+        let i = 10.5;
+        let b = true;
+        let s = 'Hà Nội';
+        document.write('i = ' + i + '<br/>');
+        document.write('f = ' + f);
+        document.write('<br/>');
+        document.write('b = ' + b);
+        document.write('<br/>');
+        document.write('s = ' + s);
+    }
+</script>
+<button onclick="bai3()">Bai3</button>
+<script>
+    function bai3() {
+        let a = prompt('Nhap so a :');
+        let b = prompt('Nhap so b :');
+        if (a%b == 0) alert('a la boi cua b')
+        else alert('a khong la boi cua b')
+    }
+</script>
 </body>
 </html>
