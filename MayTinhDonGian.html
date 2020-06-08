@@ -2,9 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<h1>Caculator</h1>
+<input type="text" id="a" size="24"> <input type="text" id="b" size="24"><br><br>
+<input type="button" onclick="addition()" value="Addition(+)">
+<input type="button" onclick="subtraction()" value="Subtraction(-)">
+<input type="button" onclick="multiplication()" value="Multiplication(x)">
+<input type="button" onclick="division()" value="Division(/)">
+<br><br>
+<p>
+    <label>Result : </label><strong id="result"></strong>
+</p>
 </body>
+<script>
+    function addition() {
+        let a = +document.getElementById("a").value;
+        let b = +document.getElementById("b").value;
+        document.getElementById("result").innerHTML=('Addition = ')+(a+b);
+    }
+    function subtraction() {
+        let a = document.getElementById("a").value;
+        let b = document.getElementById("b").value;
+        document.getElementById("result").innerHTML=('Subtraction = ')+(a-b);
+    }
+    function multiplication() {
+        let a = document.getElementById("a").value;
+        let b = document.getElementById("b").value;
+        document.getElementById("result").innerHTML=('Multiplication = ')+(a*b);
+    }
+    function division() {
+        let a = document.getElementById("a").value;
+        let b = document.getElementById("b").value;
+        document.getElementById("result").innerHTML=('Division = ')+(a/b);
+    }
+
+</script>
 </html>
