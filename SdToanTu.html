@@ -2,9 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+     function prom()
+     {
+        let inputWidth;
+        let inputHeight;
+        inputWidth = prompt("Enter the width");
+        inputHeight = prompt("Enter the height");
+        let width = parseInt(inputWidth);
+        let height = parseInt(inputHeight);
+        let area = width * height;
+        document.write("The width is: " + width +'<br/>');
+        // document.write('<br/>')
+        document.write("The height is: " + height);
+        document.write('<br/>');
+        document.write("The area is: " + area);
+
+    }
+</script>
+<p>
+    <button onclick="prom()">Click here</button><br><br>
+</p>
 </body>
 </html>
