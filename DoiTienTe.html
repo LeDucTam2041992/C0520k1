@@ -38,6 +38,7 @@
         to = document.getElementById("T").value;
         if(from =="bucks" & to =="vnd")  result = amount*23000;
         if(from =="vnd" & to =="bucks")  result = amount/23000;
+        if(from==to) result=amount;
         document.getElementById("result").innerHTML=(result+to);
     }
 </script>
