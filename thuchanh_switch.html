@@ -2,9 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    function b1() {
+        let browser = prompt('Nhap browser : ');
+        switch (browser) {
+            case 'Edge':
+                alert("You've got the Edge!");
+                break;
+            case 'Chrome':
+            case 'Firefox':
+            case 'Safari':
+            case 'Opera':
+                alert('Okay we support these browsers too');
+                break;
+            default:
+                alert('We hope that this page looks ok!');
+        }
+    }
+    function b2() {
+        let a = prompt('a?', '');
+        switch (a) {
+            case '0':
+                alert('0');
+                break;
+            case '1':
+                alert('1');
+                break;
+            case '2':
+            case '3':
+                alert('2,3');
+                break;
+        }
+    }
+    function b3() {
+        let value = parseInt(prompt('Type a number'));
+        let a=value>0;
+        switch (a) {
+            case true:
+                alert('1');
+                break;
+        }
+        if (value==0) alert('0')
+        else alert('-1')
+    }
+</script>
+
+<button onclick="b1()">Bai1</button><br><br>
+<button onclick="b2()">Bai2</button><br><br>
+<button onclick="b3()">Bai3</button><br><br>
 </body>
 </html>

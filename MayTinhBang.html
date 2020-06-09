@@ -2,9 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <style>
+        .fo td{
+            height: 75px;
+            width: 75px;
+        }
+        button{
+            width: 50px;
+            height: 50px;
+            color: blue;
+            font-size: 25px;
+        }
+
+    </style>
 </head>
 <body>
-$END$
+<table border="1" class="fo">
+    <tr>
+        <td colspan="4" id="display"></td>
+    </tr>
+    <tr align="center">
+        <td><button value="1" onclick="display(value)">1</button></td>
+        <td><button value="2" onclick="display(value)">2</button></td>
+        <td><button value="3" onclick="display(value)">3</button></td>
+        <td><button value="+" onclick="display(value)">+</button></td>
+    </tr>
+    <tr align="center">
+        <td><button value="4" onclick="display(value)">4</button></td>
+        <td><button value="5" onclick="display(value)">5</button></td>
+        <td><button value="6" onclick="display(value)">6</button></td>
+        <td><button value="-" onclick="display(value)">-</button></td>
+    </tr>
+    <tr align="center">
+        <td><button value="7" onclick="display(value)">7</button></td>
+        <td><button value="8" onclick="display(value)">8</button></td>
+        <td><button value="9" onclick="display(value)">9</button></td>
+        <td><button value="*" onclick="display(value)">*</button></td>
+    </tr>
+    <tr align="center">
+        <td><button value="c" onclick="display(value)">C</button></td>
+        <td><button value="0" onclick="display(value)">0</button></td>
+        <td><button value="=" onclick="display(value)">=</button></td>
+        <td><button value="/" onclick="display(value)">/</button></td>
+    </tr>
+    <script>
+
+    </script>
+</table>
 </body>
 </html>

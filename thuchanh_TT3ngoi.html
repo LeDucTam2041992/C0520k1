@@ -2,9 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    function b1() {
+        let a = prompt("a: ");
+        let b = prompt("b: ");
+        result = (a + b < 4) ? 'Below' : 'Over';
+        alert(result);
+    }
+    function b2() {
+        let login = prompt('Login = ');
+        let message = (login == 'Employee') ?
+            'Hello' :
+            (login == 'Director') ?
+                'Greetings' :
+                (login == '') ?
+                    'No login' :
+                    '';
+        alert(message);
+    }
+</script>
+<button onclick="b1()">Bai1</button><br><br>
+<button onclick="b2()">Bai2</button><br><br>
 </body>
 </html>
