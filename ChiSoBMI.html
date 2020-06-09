@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<pre>
+    Chi so BMI doi voi nguoi tren 20 tuoi duoc phan loai nhu sau:
+
+    BMI                           Interpretation
+    BMI&#8804;18.5                      Underweight
+    18.5&#8804;BMI&#8804;25                   Normal
+    25&#8804;BMI&#8804;30                     Overweight
+    30&#8804BMI                        Obese
+</pre>
+Can Nang <input id="wei" type="text" name="weight"><br><br>
+Chieu Cao<input id="hei" type="text" name="height"><br><br>
+<button onclick="BMI()">Click Here De Xem BMI Cua Ban</button> <label id="result"></label>
+<script>
+    function BMI() {
+        let a = +document.getElementById("wei").value;
+        let b = +document.getElementById("hei").value;
+        let bMI = a/(b^2);
+        if (bMI<18) document.getElementById("result").innerHTML='Chi so BMI = '+bMI+' Underweight'
+        else if (bMI<25) document.getElementById("result").innerHTML='Chi so BMI = '+bMI+' Normal'
+        else if (bMI<30) document.getElementById("result").innerHTML='Chi so BMI = '+bMI+' Overweight'
+        else document.getElementById("result").innerHTML='Chi so BMI = '+bMI+' Obese'
+    }
+</script>
+</body>
+</html>
