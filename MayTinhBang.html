@@ -20,33 +20,34 @@
 <body>
 <table border="1" class="fo">
     <tr>
-        <td colspan="4" id="display"></td>
+        <td colspan="4"><input id="Result" type="text" size="50"/></td>
     </tr>
     <tr align="center">
-        <td><button value="1" onclick="display(value)">1</button></td>
-        <td><button value="2" onclick="display(value)">2</button></td>
-        <td><button value="3" onclick="display(value)">3</button></td>
-        <td><button value="+" onclick="display(value)">+</button></td>
+        <td><button value="1" onclick="Result.value+=this.value">1</button></td>
+        <td><button value="2" onclick="Result.value+=this.value">2</button></td>
+        <td><button value="3" onclick="Result.value+=this.value">3</button></td>
+        <td><button value="+" onclick="Result.value+=this.value">+</button></td>
     </tr>
     <tr align="center">
-        <td><button value="4" onclick="display(value)">4</button></td>
-        <td><button value="5" onclick="display(value)">5</button></td>
-        <td><button value="6" onclick="display(value)">6</button></td>
-        <td><button value="-" onclick="display(value)">-</button></td>
+        <td><button value="4" onclick="Result.value+=this.value">4</button></td>
+        <td><button value="5" onclick="Result.value+=this.value">5</button></td>
+        <td><button value="6" onclick="Result.value+=this.value">6</button></td>
+        <td><button value="-" onclick="Result.value+=this.value">-</button></td>
     </tr>
     <tr align="center">
-        <td><button value="7" onclick="display(value)">7</button></td>
-        <td><button value="8" onclick="display(value)">8</button></td>
-        <td><button value="9" onclick="display(value)">9</button></td>
-        <td><button value="*" onclick="display(value)">*</button></td>
+        <td><button value="7" onclick="Result.value+=this.value">7</button></td>
+        <td><button value="8" onclick="Result.value+=this.value">8</button></td>
+        <td><button value="9" onclick="Result.value+=this.value">9</button></td>
+        <td><button value="*" onclick="Result.value+=this.value">*</button></td>
     </tr>
     <tr align="center">
-        <td><button value="c" onclick="display(value)">C</button></td>
-        <td><button value="0" onclick="display(value)">0</button></td>
-        <td><button value="=" onclick="display(value)">=</button></td>
-        <td><button value="/" onclick="display(value)">/</button></td>
+        <td><button value="c" onclick="Result.value=''">C</button></td>
+        <td><button value="0" onclick="Result.value+=this.value">0</button></td>
+        <td><button value="=" onclick="Result.value=eval(Result.value)">=</button></td>
+        <td><button value="/" onclick="Result.value+=this.value">/</button></td>
     </tr>
     <script>
+
 
     </script>
 </table>

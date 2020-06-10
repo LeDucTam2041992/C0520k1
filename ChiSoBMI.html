@@ -21,7 +21,7 @@ Chieu Cao<input id="hei" type="text" name="height"><br><br>
     function BMI() {
         let a = +document.getElementById("wei").value;
         let b = +document.getElementById("hei").value;
-        let bMI = a/(b^2);
+        let bMI = a/(b**2);
         if (bMI<18) document.getElementById("result").innerHTML='Chi so BMI = '+bMI+' Underweight'
         else if (bMI<25) document.getElementById("result").innerHTML='Chi so BMI = '+bMI+' Normal'
         else if (bMI<30) document.getElementById("result").innerHTML='Chi so BMI = '+bMI+' Overweight'

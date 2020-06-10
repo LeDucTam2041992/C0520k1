@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 align="center" style="color: darkorchid"><strong>DO YOU LOVE ME</strong></h2>
+<div align="center">
+    <button style="width: 40px" onclick="alert('<3')">Yes</button>
+    <button id="no" style="width:40px" onmouseover="move()" onclick="ok()">No</button>
+</div>
+<script>
+    let ojb = null;
+    ojb =document.getElementById('no');
+    function init() {
+        ojb = document.getElementById("no");
+        ojb.style.position='relative';
+        ojb.style.top='0px';
+        ojb.style.left='0px';
+    }
+    function move() {
+        let a;
+        do {
+            a = Math.floor(Math.random() * 60) - 30;
+        } while (Math.abs(a) < 13);
+        ojb.style.left = parseInt(ojb.style.left) + a + 'px';
+        ojb.style.top = parseInt(ojb.style.top) + a + 'px';
+    }
+    function ok(){
+        alert('OK.See you again :))')
+    }
+
+    window.onload=init;
+</script>
+</body>
+</html>
