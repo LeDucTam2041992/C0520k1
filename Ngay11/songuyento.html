@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function check(a) {
+        let kt = true;
+        for (let i=2;i<=Math.sqrt(a);i++){
+           if (a%i==0) {
+               kt = false;
+               break;
+           }
+        }
+        return kt;
+    }
+    let numbers = parseInt(prompt('Nhap so number nguyen to : '));
+    let result ="<p> ";
+    let count = 0;
+    let x = 2;
+    while (count<numbers){
+        if (check(x)) {
+            result=result+x+' ';
+            count++;
+            if (count%20==0) result+='<br>'
+        }
+        x++;
+    }
+    result=result+'</p>';
+    document.write(result);
+</script>
+</body>
+</html>

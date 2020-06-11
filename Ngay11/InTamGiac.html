@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt('Nhap a = '));
+    let s='<p>';
+
+        for (let j = 1; j <= a; j++) {
+            for (let k = 1; k <= a-j ; k++) {
+                s+=' ';
+            }
+            for (let k = 1; k <= j; k++) {
+                s+='*'
+            }
+            s+='<br>';
+        }
+        s=s+'<br><br>';
+        for (let j = a; j >= 1; j--) {
+            for (let k = a-j; k == 1 ; k++) {
+                s+=' ';
+            }
+            for (let k = 1; k <= j; k++) {
+                s+='*'
+            }
+            s+='<br>';
+    }
+
+    s+='</p>';
+    document.write(s);
+</script>
+</body>
+</html>
