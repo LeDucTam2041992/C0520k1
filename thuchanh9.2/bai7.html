@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p> Phuong trinh bac 2 co dang la </p>
+<p> ax<sup>2</sup>+bx+c=0 </p>
+<button onclick="display()">Click de giai ptb2</button>
+<p id="rs"></p>
+<script>
+    function display() {
+        let x1,x2;
+        let delta;
+        let a = parseFloat(prompt('Nhap he so a : '));
+        let b = parseFloat(prompt('Nhap he so b : '));
+        let c = parseFloat(prompt('Nhap he so c : '));
+        if (a==0) {
+            if (b==0) alert('Phuong trinh vo nghia')
+            else {
+                x1=-c/b;
+                document.getElementById("rs").innerHTML='Phuong trinh co 1 nghiem = '+x1;
+            }
+        }
+        else {
+            delta = (b*b-4*a*c);
+            if (delta<0) alert('Phuong trinh vo nghiem ')
+            else if (delta==0)
+            {
+                x1=-b/(2*a);
+                document.getElementById("rs").innerHTML='Phuong trinh co 1 nghiem = '+x1;
+            }
+            else {
+                x1 = (-b+Math.sqrt(delta))/(2*a);
+                x2 = (-b-Math.sqrt(delta))/(2*a);
+                document.getElementById("rs").innerHTML='Phuong trinh co 2 nghiem = '+x1+' va '+x2;
+            }
+        }
+    }
+</script>
+</body>
+</html>

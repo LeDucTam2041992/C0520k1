@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let diemKT = parseInt(prompt('Nhap diem so bai kiem tra :'));
+    let diemGK = parseInt(prompt('Nhap diem so bai thi giua ki :'));
+    let diemCK = parseInt(prompt('Nhap diem so baithi cuoi ki:'));
+    let dTK = (diemKT*1+diemGK*3+diemCK*6)/10;
+    if (dTK<4) alert('Diem tong ket cua ban la '+dTK+' .You fail')
+    else if (dTK<5.5) alert('Diem tong ket cua ban la '+dTK+' .You grade D')
+    else if (dTK<7) alert('Diem tong ket cua ban la '+dTK+' .You grade C')
+    else if (dTK<8) alert('Diem tong ket cua ban la '+dTK+' .You grade B')
+    else  alert('Diem tong ket cua ban la '+dTK+' .You grade A')
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let cuocNoiMang = parseInt(prompt('Nhap so phut cuoc noi mang : '));
+    let cuocNgoaiMang = parseInt(prompt('Nhap so phut cuoc ngoai mang : '));
+    let billNoiMang;
+    let billNgoaiMang;
+    if (cuocNoiMang>200) billNoiMang=cuocNoiMang*1200
+    else billNoiMang=cuocNoiMang*1400;
+    if (cuocNgoaiMang>200) billNgoaiMang=cuocNgoaiMang*2500
+    else billNgoaiMang=cuocNgoaiMang*3000;
+    let totalBill = billNgoaiMang+billNoiMang;
+    alert('So tien hoa don cuoc mang la : '+totalBill+' vnd');
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Phuong trinh bac nhat co dang la : </p>
+<p>a*x+b=c</p>
+<button onclick="display()">Click de giai phuong trinh</button>
+<script>
+    function display() {
+        let x;
+        let a = parseFloat(prompt('Nhap he so a '));
+        let b = parseFloat(prompt('Nhap he so b '));
+        let c = parseFloat(prompt('Nhap he so c '));
+        if (a != 0) {
+            x = (c - b) / 2;
+            alert('Phuong trinh co 1 nghiem la : ' + x)
+        } else alert('Phuong trinh vo nghia')
+    }
+
+</script>
+</body>
+</html>

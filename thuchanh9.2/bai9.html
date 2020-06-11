@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a=parseFloat(prompt('Nhap vao so nguyen a '));
+    let b=parseFloat(prompt('Nhap vao so nguyen b '));
+    let c=parseFloat(prompt('Nhap vao so nguyen c '));
+    let isOk = true;
+    if (a<=0||b<=0||c<=0) isOk=false;
+    if (a+b<=c) isOk=false;
+    if (c+b<=a) isOk=false;
+    if (a+c<=b) isOk=false;
+    if (isOk) alert('La 3 canh 1 tam giac')
+    else alert('Khong la 3 canh 1 tam giac')
+</script>
+</body>
+</html>
