@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Tu Dien Anh Viet</h2>
+English Word: <input type="text" id="eng"><br><br>
+<strong>Click here to convert to Vietnamese</strong><br><br>
+<button onclick="display()">Click Here</button><br>
+<blockquote id="result"></blockquote>
+<script>
+    function display() {
+        let eng = ['hello','hi','play','game','school','student','goodbye'];
+        let vnm = ['xin chao','chao ban','choi','tro choi','truong hoc','hoc sinh','tam biet'];
+        let word = document.getElementById('eng').value;
+        let result = 'Dont find the word you want translate !';
+        for (let i = 0; i <eng.length ; i++) {
+            if (word==eng[i]) result = vnm[i]
+        }
+        document.getElementById('result').innerHTML=result;
+    }
+</script>
+</body>
+</html>

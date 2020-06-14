@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<body>
+<h3>Caro Game Simple</h3>
+<p id="carogame" />
+<!--<input type="button" value="Nguoi choi A" onclick="changeValue()"><br><br>-->
+<!--<input type="button" value="Nguoi choi B" onclick="changeValue()"><br><br>-->
+</body>
+<script>
+    let b = document.getElementById("carogame");
+    let data = "";
+    let board = new Array();
+    for (let i = 0; i < 15; i++) {
+        board[i] = new Array();
+        for (let j = 0; j < 15 ; j++) {
+            board[i][j] = '.';
+        }
+    }
+    for (let i = 0; i < 15; i++) {
+        data += "<br>";
+        for (let j = 0; j < 15; j++) {
+            data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+        }
+    }
+    data += "<br/><br/><input type='button' value='Nguoi choi A' onclick='changeValue(value)'>"
+    data += "<br/><br/><input type='button' value='Nguoi choi B' onclick='changeValue(value)'>"
+    b.innerHTML = data;
+
+    function changeValue(value) {
+        let positionX = +prompt("X: ");
+        let positionY = +prompt("Y: ");
+        data = "";
+        if (value == 'Nguoi choi A') board[positionX][positionY] = "x"
+        else board[positionX][positionY] = "o";
+        for (let i = 0; i < 15; i++) {
+            data += "<br>";
+            for (let j = 0; j < 15; j++) {
+                data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+            }
+        }
+        data += "<br/><br/><input type='button' value='Nguoi choi A' onclick='changeValue(value)'>"
+        data += "<br/><br/><input type='button' value='Nguoi choi B' onclick='changeValue(value)'>"
+        b.innerHTML = "<hr/>" + data;
+        let isWin = check(positionX,positionY);
+        // if (isWin) alert('Chuc mung win);
+        console.log(isWin);
+    }
+
+    function check(positionX,positionY) {
+        let a1 = board[positionX][positionY];
+        let a2 = board[positionX-1][positionY-1];
+        let a3 = board[positionX-1][positionY];
+        let a4 = board[positionX-1][positionY+1];
+        let a5 = board[positionX][positionY-1];
+        let a6 = board[positionX][positionY+1];
+        let a7 = board[positionX+1][positionY-1];
+        let a8 = board[positionX+1][positionY];
+        let a9 = board[positionX+1][positionY+1];
+        let a10 = board[positionX-2][positionY-2];
+        let a11 = board[positionX-2][positionY];
+        let a12 = board[positionX-2][positionY+2];
+        let a13 = board[positionX][positionY-2];
+        let a14 = board[positionX][positionY+2];
+        let a15 = board[positionX+2][positionY-2];
+        let a16 = board[positionX+2][positionY];
+        let a17 = board[positionX+2][positionY+2];
+        let isWin = false;
+        if (a1==a2 && a1==a9) isWin=true;
+        if (a1==a3 && a1==a8) isWin=true;
+        if (a1==a4 && a1==a7) isWin=true;
+        if (a1==a5 && a1==a6) isWin=true;
+        return isWin;
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<br><br>
+<input type="text" id="str"><button onclick="display()">Click here</button><br><br>
+<p id="result" />
+<script>
+    function display() {
+    let str = document.getElementById('str').value;
+    let Upp = str.toUpperCase();
+    console.log(str);
+    console.log(Upp);
+    let result =[];
+    for (let i = 0; i <str.length ; i++) {
+        if (str[i]===Upp[i]) result.push(str[i].toLowerCase())
+        else result.push(Upp[i]);
+    }
+        document.getElementById('result').innerHTML = result.join('');
+    }
+</script>
+</body>
+</html>
