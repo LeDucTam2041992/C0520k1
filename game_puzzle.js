@@ -7,7 +7,7 @@ function changeIM(x) {
     x.src = img;
     let name1 = document.getElementById('img1').src;
     name1 = name1.substring(name1.indexOf('images/'),name1.indexOf('.')-6);
-    // console.log(name1);
+     console.log(name1);
     let name2 = document.getElementById('img2').src;
     name2 = name2.substring(name2.indexOf('images/'),name2.indexOf('.')-6);
     // console.log(name2);
