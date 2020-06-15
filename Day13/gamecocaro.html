@@ -47,33 +47,62 @@
         data += "<br/><br/><input type='button' value='Nguoi choi B' onclick='changeValue(value)'>"
         b.innerHTML = "<hr/>" + data;
         let isWin = check(positionX,positionY);
-        // if (isWin) alert('Chuc mung win);
+        if (isWin) {
+            data+="<br><br>Chuc mung "+value+ " win";
+            b.innerHTML = "<hr/>" + data;
+        }
         console.log(isWin);
     }
 
     function check(positionX,positionY) {
-        let a1 = board[positionX][positionY];
-        let a2 = board[positionX-1][positionY-1];
-        let a3 = board[positionX-1][positionY];
-        let a4 = board[positionX-1][positionY+1];
-        let a5 = board[positionX][positionY-1];
-        let a6 = board[positionX][positionY+1];
-        let a7 = board[positionX+1][positionY-1];
-        let a8 = board[positionX+1][positionY];
-        let a9 = board[positionX+1][positionY+1];
-        let a10 = board[positionX-2][positionY-2];
-        let a11 = board[positionX-2][positionY];
-        let a12 = board[positionX-2][positionY+2];
-        let a13 = board[positionX][positionY-2];
-        let a14 = board[positionX][positionY+2];
-        let a15 = board[positionX+2][positionY-2];
-        let a16 = board[positionX+2][positionY];
-        let a17 = board[positionX+2][positionY+2];
+        let a = new Array(15);
+        a[1] = board[positionX][positionY];
+        if (positionX-1>=0 && positionY-1>=0) a[2] = board[positionX-1][positionY-1]
+        else a[2] ='0';
+        if (positionX-1>=0 && positionY>=0) a[3] = board[positionX-1][positionY]
+        else a[3] ='0';
+        if (positionX-1>=0 && positionY+1<=14) a[4] = board[positionX-1][positionY+1]
+        else a[4] ='0';
+        if (positionY-1>=0) a[5] = board[positionX][positionY-1]
+        else a[5] ='0';
+        if (positionY+1<=14) a[6] = board[positionX][positionY+1]
+        else a[6] ='0';
+        if (positionX+1<=14 && positionY-1>=0) a[7] = board[positionX+1][positionY-1]
+        else a[7] ='0';
+        if (positionX+1<=14) a[8] = board[positionX+1][positionY]
+        else a[8] ='0';
+        if (positionX+1<=14 && positionY+1<=14) a[9] = board[positionX+1][positionY+1]
+        else a[9] ='0';
+        if (positionX-2>=0 && positionY-2>=0) a[10] = board[positionX-2][positionY-2]
+        else a[10] ='0';
+        if (positionX-2>=0) a[11] = board[positionX-2][positionY]
+        else a[11] ='0';
+        if (positionX-2>=0 && positionY+2<=14) a[12] = board[positionX-2][positionY+2]
+        else a[12] ='0';
+        if (positionY-2>=0) a[13] = board[positionX][positionY-2]
+        else a[13] ='0';
+        if (positionY+2<=14) a[14] = board[positionX][positionY+2]
+        else a[14] ='0';
+        if (positionX+2<=14 && positionY-2>=0) a[15] = board[positionX+2][positionY-2]
+        else a[15] ='0';
+        if (positionX+2<=14) a[16] = board[positionX+2][positionY]
+        else a[16] ='0';
+        if (positionX+2<=14 && positionY+2<=14) a[15] = board[positionX+2][positionY+2]
+        else a[17] ='0';
+
         let isWin = false;
-        if (a1==a2 && a1==a9) isWin=true;
-        if (a1==a3 && a1==a8) isWin=true;
-        if (a1==a4 && a1==a7) isWin=true;
-        if (a1==a5 && a1==a6) isWin=true;
+        if (a[1]==a[2] && a[1]==a[9]) isWin=true;
+        if (a[1]==a[3] && a[1]==a[8]) isWin=true;
+        if (a[1]==a[4] && a[1]==a[7]) isWin=true;
+        if (a[1]==a[5] && a[1]==a[6]) isWin=true;
+        if (a[1]==a[2] && a[1]==a[10]) isWin=true;
+        if (a[1]==a[3] && a[1]==a[11]) isWin=true;
+        if (a[1]==a[4] && a[1]==a[12]) isWin=true;
+        if (a[1]==a[6] && a[1]==a[14]) isWin=true;
+        if (a[1]==a[9] && a[1]==a[17]) isWin=true;
+        if (a[1]==a[8] && a[1]==a[16]) isWin=true;
+        if (a[1]==a[7] && a[1]==a[15]) isWin=true;
+        if (a[1]==a[5] && a[1]==a[13]) isWin=true;
         return isWin;
     }
 </script>

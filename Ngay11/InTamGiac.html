@@ -11,7 +11,7 @@
 
         for (let j = 1; j <= a; j++) {
             for (let k = 1; k <= a-j ; k++) {
-                s+=' ';
+                s+='&ensp;';
             }
             for (let k = 1; k <= j; k++) {
                 s+='*'
@@ -20,10 +20,10 @@
         }
         s=s+'<br><br>';
         for (let j = a; j >= 1; j--) {
-            for (let k = a-j; k == 1 ; k++) {
-                s+=' ';
+            for (let k = a-j; k >= 1 ; k--) {
+                s+='&ensp;';
             }
-            for (let k = 1; k <= j; k++) {
+            for (let k = j; k >= 1; k--) {
                 s+='*'
             }
             s+='<br>';
