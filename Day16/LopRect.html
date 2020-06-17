@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid blue">
+    <p id="result" />
+</body>
+<script>
+    let Rectangle = function (width,height) {
+        this.width= width;
+        this.height = height;
+        this.getHeight= function() {
+            return this.height
+        }
+        this.getWidth = function () {
+            return this.width
+        }
+        this.setHeight= function (height) {
+            this.height = height;
+        }
+        this.setWidth = function (width) {
+            this.width = width;
+        }
+        this.getS = function () {
+           return this.height*this.width;
+        }
+        this.getP = function () {
+            return (this.height+this.width)*2
+        }
+        this.show = function() {
+            var ctx = document.getElementById("myCanvas").getContext("2d");
+            ctx.beginPath();
+            ctx.rect(200, 200, this.width, this.height);
+            ctx.fill();
+        }
+    }
+    let rec1 = new Rectangle(600, 300);
+    rec1.setWidth(200);console.log(rec1.getWidth());
+    rec1.setHeight(100);console.log(rec1.getHeight());
+    let p = rec1.getP();console.log(p);
+    let s = rec1.getS();
+    // document.getElementById("result").innerHTML ='Dien tich = '+s+' Chu vi = '+p;
+    rec1.show();
+</script>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đảo ngược mảng</title>
+</head>
+<body>
+<script>
+    function inputArr() {
+        let arr = [];
+        let num = +prompt("Số lượng tham số:")
+        for (let i = 0; i < num; i++) {
+            arr[i] = +prompt("Nhập số:")
+        }
+        document.write(arr.reverse());
+    }
+    inputArr();
+</script>
+</body>
+</html>

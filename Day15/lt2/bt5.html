@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm min</title>
+</head>
+<body>
+<script>
+    let num1, num2, num3;
+    num1 = +prompt("Nhập số thứ nhất: ");
+    num2 = +prompt("Nhập số thứ hai: ");
+    num3 = +prompt("Nhập số thứ ba: ");
+    function searchMin(a, b, c) {
+        min = a;
+            if (b < min){
+                min = b;
+            } else if (c < min){
+                min = c;
+        }
+        document.write("Số nhỏ nhất trong ba số là: " + min);
+    }
+    searchMin(num1, num2, num3);
+</script>
+</body>
+</html>

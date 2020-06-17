@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra kiểu dữ liệu</title>
+</head>
+<body>
+<script>
+    inputCheck=prompt("Nhập: ");
+    function checkType(check) {
+        console.log(typeof check);
+        if (isNaN(check) === false ){
+            document.write("True");
+        } else {
+            document.write("False");
+        }
+    }
+    checkType(inputCheck);
+</script>
+</body>
+</html>

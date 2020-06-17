@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diện tích, chu vi hình tròn</title>
+</head>
+<body>
+<p></p>
+<p></p>
+<script>
+    const PI= 3.14159;
+    let inputRadius= parseFloat(prompt("Nhập bán kính:"));
+    function circleArea(r) {
+        let Circle_Area= r*r*PI;
+        document.write("Diện tích là: " + Circle_Area + "<br>");
+    }
+    function circlePerimeter(r) {
+        let Circle_Perimeter= r*2*PI;
+        document.write("Chu vi là: " + Circle_Perimeter);
+    }
+    circleArea(inputRadius);
+    circlePerimeter(inputRadius);
+</script>
+</body>
+</html>

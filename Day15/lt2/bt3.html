@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giai thừa</title>
+</head>
+<body>
+<script>
+    let inputNum= +prompt("Nhập: ")
+    function factorial(a) {
+        let result= a;
+        if (a === 0 || a === 1){
+            return 1;
+        }
+        while (a >1 ){
+            a--;
+            result *= a;
+        }
+        document.write(result);
+    }
+    factorial(inputNum);
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi vị trí</title>
+</head>
+<body>
+<script>
+    let num1 = +prompt("Nhập num1: ")
+    let num2 = +prompt("Nhập num2: ")
+    function changeNum(a, b) {
+        let c= a;
+        a = b;
+        b = c;
+        document.write(a + ", " + b);
+    }
+    changeNum(num1, num2);
+</script>
+</body>
+</html>

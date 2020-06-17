@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let nameStar = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let nameConstellation = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+    function check(String) {
+        for (let i = 0; i <nameStar.length ; i++) {
+            if (String==nameStar[i]) return nameConstellation[i]
+        }
+        return "No find star";
+    }
+    let input = prompt('Nhap ten ngoi sao : ');
+    let result = check(input);
+    document.write(result);
+</script>
+</html>

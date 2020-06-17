@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7 ngôi sao</title>
+</head>
+<body>
+<script>
+    let inputStar = prompt("Nhập: ");
+    function starArr(a) {
+        let arr1= ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let arr2= ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        let result= "Không tìm thấy";
+        for(let i = 0; i < arr1.length; i++)
+            if (a == arr1[i]) {
+                result = document.write( "Ngôi sao " + arr1[i] + ", "+ "chòm sao " + arr2[i]);
+            }
+        document.write(result);
+    }
+    starArr(inputStar);
+</script>
+</body>
+</html>

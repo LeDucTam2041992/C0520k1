@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số nguyên dương</title>
+</head>
+<body>
+<script>
+    inputNum= parseFloat(prompt("Nhập:"))
+    function checkNum(a) {
+        if (a%1==0 && a>0){
+            result= "True";
+        } else {
+            result= "False";
+        }
+        document.write(result)
+    }
+    checkNum(inputNum);
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>So sánh tham số</title>
+</head>
+<body>
+<script>
+    let sum;
+    function parameters(par1, par2) {
+        if (par1> par2){
+            alert("Tham số thứ nhất lớn hơn tham số thứ hai!")
+        } else {
+            sum= par1+ par2;
+        }
+    }
+    let par1=+prompt("Nhập tham số 1:");
+    let par2=+prompt("Nhập tham số 2:");
+    parameters(par1, par2);
+    document.write(sum);
+</script>
+</body>
+</html>
