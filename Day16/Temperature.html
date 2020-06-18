@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="display" />
+</body>
+<script>
+    let Temperature = function () {
+        this.setDoC = function (doC) {
+            this.doC = doC;
+        }
+        this.getDoC = function () {
+            return this.doC
+        }
+        this.getDoF = function () {
+            return  32+this.doC*9/5;
+        }
+        this.getDoK = function () {
+            return  273.15+ this.doC
+        }
+        this.show = function () {
+            document.getElementById('display').innerHTML = 'do C = '+this.doC + '<br> do F = '
+                + (32+this.doC*9/5) + '<br> do K = ' + (273.15+ this.doC);
+        }
+    }
+    let tem = new Temperature();
+    tem.setDoC(25);
+    tem.show();
+    tem.setDoC(30);
+    tem.show();
+</script>
+</html>
