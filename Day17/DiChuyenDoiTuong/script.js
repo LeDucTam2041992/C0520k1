@@ -27,8 +27,7 @@ var hero = new Hero('pikachu.png', 0, 0, 200,50,0);
 
 function start(){
   hero.move();
-  if(hero.left <= window.innerWidth - hero.size) {
-    hero.speedY = hero.speedX;
+  if(hero.left+this.size >= window.innerWidth) {
     hero.speedX =0;
   }
   document.getElementById('game').innerHTML = hero.getHeroElement();
