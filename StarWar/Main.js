@@ -1,9 +1,9 @@
 const mapWidth = 960;
-const mapHeight = 540;
+const mapHeight = 640;
 const myShipWidth = 60;
 const myShipHeight = 60;
-const enemyWidth = 40;
-const enemyHeight = 40;
+const enemyWidth = 50;
+const enemyHeight = 50;
 const bulletWidth = 10;
 const bulletHeight = 10;
 let spaceShip;
