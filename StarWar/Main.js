@@ -14,6 +14,7 @@ let bullets =[];
 let timeShoot = 0;
 let score = 0;
 let gameMusic;
+let myScore;
 function startGame() {
     spaceShip = new component(myShipWidth, myShipHeight, 'spaceship.png',
         (mapWidth-myShipWidth)/2,mapHeight-myShipHeight,'image');
@@ -23,7 +24,7 @@ function startGame() {
         enemy[i] = new component(enemyWidth, enemyHeight, "enemy.png", x, y, 'image');
     }
     myBackGround = new component(mapWidth,mapHeight*2,'background.png',0,0,'background')
-    myScore = new myScore(0,'Consoles','blue', 800,50);
+    myScore = new Score(0,'Consoles','blue', 800,50);
     gameMusic = new sound("Music.mp3");
     gameMusic.play();
     myGameArea.start();

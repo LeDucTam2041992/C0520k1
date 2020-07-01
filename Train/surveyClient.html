@@ -2,9 +2,84 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<form>
+    <h2>Market Research Survey</h2>
+    <p>Please take a few momments to complete this satisfaction survey</p>
+    <strong>What is your age range</strong><br>
+    <select>
+        <option value="18-24">18-24</option>
+        <option value="25-34">25-34</option>
+        <option value="35-50">35-50</option>
+        <option value="50+">50+</option>
+    </select>
+    <br><br>
+    <strong>What is your yearly income range</strong><br>
+    <select>
+        <option value="0-25000">$0-$25000</option>
+        <option value="25001-50000">$25001-$50000</option>
+        <option value="50001-100000">$50001-$100000</option>
+        <option value="100000+">$100000+</option>
+    </select>
+    <br><br>
+    <strong>Gender Identity</strong><br>
+    <input type="radio" name="gender" value="Male">Male<br>
+    <input type="radio" name="gender" value="Female">Female<br>
+    <input type="radio" name="gender" value="Nonbinary">Nonbinary<br>
+    <input type="radio" name="gender" value="Other">Other<br>
+    <input type="text" name="gender">
+    <br><br>
+    <strong>Which of the following products have your purchased in the last 2 months.
+        Please check all that apply.</strong><br>
+    <input type="checkbox" name="">Product 1<br>
+    <input type="checkbox" name="">Product 2<br>
+    <input type="checkbox" name="">Product 3
+    <br><br>
+    <strong>How often would you use our new product?</strong><br>
+    <input type="radio" name="newProduct">Daily<br>
+    <input type="radio" name="newProduct">Weekly<br>
+    <input type="radio" name="newProduct">Monthly
+    <br><br>
+    <strong>What would you pay for the new product?</strong><br>
+    $<input type="text" name="pay">-<input type="text" name="cents" size="10">
+    <pre>   Dollar                     cents</pre>
+    <strong>What features would you like to see in the new product.</strong><br>
+    <textarea name="111" rows="5" cols="60"></textarea><br><br>
+    <strong>Please rate your level of agreement with the following statements</strong><br>
+    <table border="1">
+        <tr>
+            <td width="300"></td>
+            <td width="150">Strongly disagree</td>
+            <td width="150">Disagree</td>
+            <td width="150">Agree</td>
+            <td width="150">Strongly Agree</td>
+        </tr>
+        <tr>
+            <td><strong>Our products are priced fairly</strong></td>
+            <td align="center"><input type="radio" name="fairly"><br><strong>1</strong></td>
+            <td align="center"><input type="radio" name="fairly"><br><strong>2</strong></td>
+            <td align="center"><input type="radio" name="fairly"><br><strong>3</strong></td>
+            <td align="center"><input type="radio" name="fairly"><br><strong>4</strong></td>
+        </tr>
+        <tr>
+            <td><strong>Our products are high quality</strong></td>
+            <td align="center"><input type="radio" name="quality"><br><strong>1</strong></td>
+            <td align="center"><input type="radio" name="quality"><br><strong>2</strong></td>
+            <td align="center"><input type="radio" name="quality"><br><strong>3</strong></td>
+            <td align="center"><input type="radio" name="quality"><br><strong>4</strong></td>
+        </tr>
+        <tr>
+            <td><strong>You would recommend our product to a friend or coworkery</strong></td>
+            <td align="center"><input type="radio" name="recommend"><br><strong>1</strong></td>
+            <td align="center"><input type="radio" name="recommend"><br><strong>2</strong></td>
+            <td align="center"><input type="radio" name="recommend"><br><strong>3</strong></td>
+            <td align="center"><input type="radio" name="recommend"><br><strong>4</strong></td>
+        </tr>
+    </table>
+    <br>
+    <input type="submit" value="Submit">
+</form>
 </body>
 </html>

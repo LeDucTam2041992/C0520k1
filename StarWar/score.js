@@ -1,4 +1,4 @@
-function myScore(point,font,color,x,y) {
+function Score(point, font, color, x, y) {
     this.point = point;
     this.font = '30px ' + font;
     this.x = x;

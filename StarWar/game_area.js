@@ -52,7 +52,7 @@ function updateGameArea() {
                 enemy[i].y = -Math.floor(Math.random()*mapHeight);
                 bullets.splice(j,1);
                 score++;
-                if (score%10==0) enemySpeed+=1;
+                if (score%10==0) eSpenemyed+=1;
             }
         }
         enemy[i].speedY = enemySpeed;
